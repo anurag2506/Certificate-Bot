@@ -1,0 +1,87 @@
+body {
+    font-family: Monsterrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f4f4;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+    position: relative;
+    width: 560px;
+    height: 400px;
+}
+
+.container img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; 
+}
+
+.content h1{
+    margin: 175px;
+    padding: 0;
+    margin-right: 10px;
+    z-index: 3; 
+}
+.content h2{
+    margin-top:-167px;
+    padding: 0;
+    margin-left: 330px;
+    z-index: 3;
+} 
+.content h3{
+    margin-top: 40px;
+    padding: 0;
+    margin-left:300px;
+    z-index: 3;
+} 
+.content h4{
+    margin-top: -25px;
+    padding: 0;
+    margin-left: 275px;
+    z-index: 3;
+}
+
+input[type='text'] {
+    position: relative;
+    z-index: 4; 
+    margin-bottom: 10px;
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px; 
+}
+button{
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: rgb(0, 110, 237);
+    color: #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: 230px;
+
+}
+button:hover {
+    transform: scale(1.1);
+  }
+  button:hover {
+    background-color: #2200ff;
+  }
+
+

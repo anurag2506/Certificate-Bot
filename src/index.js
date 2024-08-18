@@ -2,16 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Chatbot from './Pages/chatbot';
+import Certificate from './Pages/certificate';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        index: true,  // This makes Chatbot the default route
+        element: <Chatbot />,
+      },
+      {
+        path: "/certificate",
+        element: <Certificate />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(<RouterProvider router={router} />);
